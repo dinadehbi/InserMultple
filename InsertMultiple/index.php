@@ -121,7 +121,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
     <header>
     <form method="post">
         <br>
-        <h1>Get Last Id:</h1>
+        <h1>Insert Multiple:</h1>
         <div id="container">
         <div>
         <label>FirstName:</label><br>
