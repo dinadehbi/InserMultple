@@ -82,9 +82,9 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
     $servername = "localhost";
     $username = "root";
-    $database = "myData";
+    $database = "ana";
     $password = "";
-    $tablename = "Form1";
+    $tablename = "Form";
 
     $fname = $_POST["fname"];
     $lname = $_POST["lname"];
@@ -100,12 +100,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["submit"])) {
     $con -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     $con->beginTransaction();
 
-    $con->exec("INSERT INTO $tablename (firstname, lastname, email)
+    $con->exec("INSERT INTO $tablename (`Firstname`, `Lastname`, `Email`)
     VALUES ('$fname', '$lname', '$email')");
-    $con->exec("INSERT INTO $tablename (firstname, lastname, email)
+    $con->exec("INSERT INTO $tablename (`Firstname`, `Lastname`, `Email`)
     VALUES ('$fname2', '$lname2', '$email2')");
 
-      $con->commit();
+    $con->commit();
 
     $display = "New records created successfully ";
 
